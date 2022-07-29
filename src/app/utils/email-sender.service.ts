@@ -15,8 +15,9 @@ export class EmailSenderService {
     const body = senderDto.body_email
     const transporter = createTransport({
       host: 'smtp.kinghost.net',
-      port: 587 ,
-      secure: false,
+      port: 465 ,
+
+      secure: true,
       auth: {
         user: 'luiz.junior@globalsys.com.br',
         pass: 'lj22ac*22'
