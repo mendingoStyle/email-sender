@@ -8,6 +8,9 @@
     "start": "node dist"
 
   },
+  "engines": {
+    "node": "16.13.1"
+  },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.105.0",
     "@golevelup/nestjs-rabbitmq": "^2.3.0",
