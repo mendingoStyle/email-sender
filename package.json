@@ -1,7 +1,7 @@
 {
   "name": "email_sender",
   "version": "1",
-  "main": "index.js",
+  "main": "dist/src/main.js",
   "license": "MIT",
   "scripts": {
     "build": "nest build",
