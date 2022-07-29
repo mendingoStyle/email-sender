@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "build": "nest build",
-    "start": "node dist"
+    "start": "cross-env NODE_ENV=production node dist/src/main"
 
   },
   "engines": {
