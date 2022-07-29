@@ -14,19 +14,19 @@ export class EmailSenderService {
     console.log('oi')
     const body = senderDto.body_email
     const transporter = createTransport({
-      host: 'smtp.kinghost.net',
-      port: 465 ,
+      host: 'smtp-mail.outlook.com',
+      port: 587 ,
 
-      secure: true,
+      secure: false,
       auth: {
-        user: 'luiz.junior@globalsys.com.br',
-        pass: 'lj22ac*22'
+        user: 'now_adm@outlook.com',
+        pass: 'SystemNowPassword123'
       },
 
     });
 
     const mailOptions = {
-      from: 'luiz.junior@globalsys.com.br',
+      from: 'now_adm@outlook.com',
       to: senderDto.email_destiny,
       subject: senderDto.subject,
       html: body
