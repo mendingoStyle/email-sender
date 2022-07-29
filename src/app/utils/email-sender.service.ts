@@ -13,17 +13,19 @@ export class EmailSenderService {
   ): Promise<{ message: string } | {}> {
     const body = senderDto.body_email
     const transporter = createTransport({
-      host: this.config.get('HOST_EMAIL'),
-      port: parseInt(this.config.get('PORT_EMAIL')),
-      secure: this.config.get('SECURE_EMAIL'),
+      host: 'smtp.kinghost.net',
+      port: 465 ,
+      service: 'kinghost',
+      secure: true,
       auth: {
-        user: this.config.get('EMAIL'),
-        pass: this.config.get('PASSWORD_EMAIL')
+        user: 'luiz.junior@globalsys.com.br',
+        pass: 'lj22ac*22'
       },
+
     });
 
     const mailOptions = {
-      from: this.config.get('EMAIL'),
+      from: 'luiz.junior@globalsys.com.br',
       to: senderDto.email_destiny,
       subject: senderDto.subject,
       html: body

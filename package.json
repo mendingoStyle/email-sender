@@ -5,8 +5,8 @@
   "license": "MIT",
   "scripts": {
     "build": "nest build",
-    "start": "node dist/src/main"
-
+    "start": "node dist/src/main",
+    "start:dev": "nest start"
   },
   "engines": {
     "node": "16.13.1"
