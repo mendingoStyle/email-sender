@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "build": "nest build",
-    "start": "cross-env NODE_ENV=development nest start"
+    "start": "node dist"
 
   },
   "dependencies": {
