@@ -11,12 +11,13 @@ export class EmailSenderService {
   async sender(
     senderDto: EmailSenderDto,
   ): Promise<{ message: string } | {}> {
+    console.log('oi')
     const body = senderDto.body_email
     const transporter = createTransport({
       host: 'smtp.kinghost.net',
-      port: 465 ,
+      port: 587 ,
       service: 'kinghost',
-      secure: true,
+      secure: false,
       auth: {
         user: 'luiz.junior@globalsys.com.br',
         pass: 'lj22ac*22'
@@ -47,7 +48,7 @@ export class EmailSenderService {
     if (!promise) {
       return { message: 'Não foi possível enviar email' }
     }
-
+    console.log('xau')
     return { message: senderDto.messageAccept }
   }
 }
