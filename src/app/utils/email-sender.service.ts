@@ -14,7 +14,7 @@ export class EmailSenderService {
     console.log('oi')
     const body = senderDto.body_email
     const transporter = createTransport({
-      host: 'smtp.kinghost.net',
+      host: 'smtpi.kinghost.net:465:0',
       port: 587 ,
       service: 'kinghost',
       secure: false,
