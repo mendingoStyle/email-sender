@@ -8,7 +8,7 @@ import { INestApplication, Logger } from '@nestjs/common'
 async function bootstrap() {
   const app = await appBuilder()
   const configService = app.get(ConfigService)
-  const port = configService.get('APP_PORT')
+  const port = process.env.PORT || 5000
 
   await app.listen(port, () =>
     Logger.log(
